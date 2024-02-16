@@ -1,0 +1,288 @@
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    color: #fff;
+    background: #000;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 60px;
+    transition: all 250ms ease;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 32px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.nav__list {
+    display: flex;
+}
+
+.nav__list a {
+    margin: 0 30px;
+    padding: 2px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 500;
+    border-bottom: 2px solid transparent;
+    transition: all 250ms ease;
+}
+
+.nav__list a:hover {
+    border-bottom: 2px solid #fff;
+}
+
+.nav__list a.active {
+    border-bottom: 2px solid #fff;
+}
+
+.right__nav {
+    display: flex;
+    align-items: center;
+}
+
+.h__btn {
+    display: inline-block;
+    padding: 9px 20px;
+    border: 1px solid #f5dca8;
+    line-height: 1.4;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 30px;
+    color: #fff;
+    transition: all 250ms ease;
+}
+
+.h__btn:hover {
+    transform: scale(1.06);
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #fff;
+}
+
+#menu-icon {
+    font-size: 42px;
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+
+section {
+    padding: 0 60px;
+}
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-image: url(../images/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+.container {
+    padding-top: 250px;
+}
+
+.container h6 {
+    font-size: 14px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.container h1 {
+    font-family: "Permanent Marker", cursive;
+    font-size: 100px;
+    margin: 0 0 30px;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.container h3 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.container p {
+    width: 500px;
+    max-width: 100%;
+    line-height: 2;
+    font-size: 15px;
+    margin-bottom: 50px;
+}
+
+.container a {
+    display: inline-block;
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #fff;
+    padding: 9px 25px;
+    line-height: 1.4;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 250ms ease;
+}
+
+.container a:hover {
+    transform: scale(1.06);
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid #f5dca8;
+}
+
+.container a.cta {
+    border: 1px solid #f5dca8;
+    color: #fff;
+    background-color: transparent;
+    margin-left: 20px;
+}
+
+.container a.cta:hover {
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #fff;
+}
+
+.container a.cta i {
+    margin-right: 8px;
+}
+
+.social {
+    position: absolute;
+    bottom: 30px;
+    left: 60px;
+}
+
+.social i {
+    display: inline-block;
+    color: #f5dca8;
+    margin-right: 22px;
+    font-size: 24px;
+    transition: all 250ms ease;
+}
+
+.social i:hover {
+    color: #fff;
+    transform: translateY(-5px);
+}
+
+@media (max-width: 1450px) {
+    header {
+        padding: 17px 8%;
+    }
+
+    section {
+        padding: 0 8%;
+    }
+
+    .social {
+        left: 8%;
+    }
+    .container {
+        padding-top: 230px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .container h1 {
+        font-size: 80px;
+        margin: 0 0 25px;
+    }
+
+    .container p {
+        margin-bottom: 30px;
+    }
+
+    .container h6 {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 950px) {
+    header {
+        padding: 17px 5%;
+    }
+
+    section {
+        padding: 0 5%;
+    }
+
+    .social {
+        left: 5%;
+    }
+}
+
+@media (max-width: 860px) {
+    #menu-icon {
+        display: block;
+    }
+
+    .nav__list {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        padding: 50px 50px;
+        top: 0;
+        right: 0;
+        left: 100%;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        background-color: #db8c1c;
+        transition: all 250ms ease;
+    }
+
+    .nav__list a {
+        display: block;
+        padding: 0;
+        margin: 0 0 40px;
+        font-size: 2.1rem;
+        font-weight: 400;
+        color: #f5dca8;
+        border-bottom: none;
+    }
+
+    .nav__list a.active {
+        border-bottom: none;
+        color: #fff;
+    }
+
+    .nav__list a:hover {
+        color: #fff;
+        border-bottom: none;
+    }
+
+    .nav__list.open {
+        left: 0;
+    }
+}
+
+@media (max-width: 535px) {
+    .container h1 {
+        font-size: 70px;
+    }
+}
+
+
+
+
+
